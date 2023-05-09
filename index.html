@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" type="image/png" href="ATAK_logo_v1.png">
+    <link rel="stylesheet" href="style.css" />
+    <title>Log In</title>
+  </head>
+
+  <body>
+    <div class="page-container">
+      <div class="form-container">
+        <!-- login form -->
+        <form action="POST" id="login-form" class="auth-form active">
+          <div class="auth-form__header">
+            <h1>Welcome back</h1>
+            <p>
+              Don't have an account?
+              <button id="sign-up-btn" type="button">Sign up</button>
+            </p>
+          </div>
+          <div class="form-group">
+            <label for="login-email">Email address</label>
+            <input
+              type="email"
+              name="login-email"
+              id="login-email"
+              placeholder="name@email.com"
+              aria-label="Email address"
+              required
+            />
+            <span id="login-email-error" class="error-msg"></span>
+          </div>
+          <div class="form-group">
+            <label for="login-password">Password</label>
+            <input
+              type="password"
+              name="login-password"
+              id="login-password"
+              placeholder="Enter your password"
+              minlength="8"
+              aria-label="Password"
+              required
+            />
+            <span id="login-password-error" class="error-msg"></span>
+          </div>
+          <div class="auth-form__footer">
+            <button id="auth-form-btn" type="submit">Login</button>
+            <p>
+              Forgot password?
+              <button id="forgot-pw-btn" type="button">Click here</button>
+            </p>
+          </div>
+        </form>
+
+        <!-- sign up form -->
+        <form action="POST" id="sign-up-form" class="auth-form ">
+          <div class="auth-form__header">
+            <h1>Welcome to ATAK</h1>
+            <p>Create your account</p>
+          </div>
+          <div class="form-group form-group--2-col">
+            <div class="form-group">
+              <label for="sign-up-first-name">First Name</label>
+              <input
+                type="text"
+                name="sign-up-first-name"
+                id="sign-up-first-name"
+                placeholder="Aymen"
+                aria-label="First name"
+                required
+              />
+              <span id="sign-up-first-name-error" class="error-msg"></span>
+            </div>
+            <div class="form-group">
+              <label for="sign-up-last-name">Last Name</label>
+              <input
+                type="text"
+                name="sign-up-last-name"
+                id="sign-up-last-name"
+                placeholder="Khanfir"
+                aria-label="Last name"
+                required
+              />
+              <span id="sign-up-last-name-error" class="error-msg"></span>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="sign-up-email">Email address</label>
+            <input
+              type="email"
+              name="sign-up-email"
+              id="sign-up-email"
+              placeholder="example@gmail.com"
+              aria-label="Email address"
+              required
+            />
+            <span id="sign-up-email-error" class="error-msg"></span>
+          </div>
+          <div class="form-group form-group--2-col">
+            <div class="form-group">
+              <label for="sign-up-password">Password</label>
+              <input
+                type="password"
+                name="sign-up-password"
+                id="sign-up-password"
+                minlength="8"
+                aria-label="Password"
+                required
+              />
+              <span id="sign-up-password-error" class="error-msg"></span>
+            </div>
+            <div class="form-group">
+              <label for="sign-up-password-confirm">Confirm Password</label>
+              <input
+                type="password"
+                name="sign-up-password-confirm"
+                id="sign-up-password-confirm"
+                minlength="8"
+                aria-label="Confirm password"
+                required
+              />
+              <span
+                id="sign-up-password-confirm-error"
+                class="error-msg"
+              ></span>
+            </div>
+          </div>
+          <div class="auth-form__footer">
+            <button id="auth-sign-up-btn" type="submit">Sign Up</button>
+            <p>
+              Already on ATAK?
+              <button id="login-btn" type="button">Log in</button>
+            </p>
+          </div>
+        </form>
+
+        <!-- forgot password form -->
+        <form action="POST" id="forgot-pw-form" class="auth-form">
+          <div class="auth-form__header">
+            <h1>Reset your password</h1>
+            <p>
+              Enter your email and we'll send you a secure link to reset your
+              password
+            </p>
+          </div>
+          <div class="form-group">
+            <label for="forgot-pw-email">Email address</label>
+            <input
+              type="email"
+              name="forgot-pw-email"
+              id="forgot-pw-email"
+              placeholder="example@gmail.com"
+              aria-label="Email address"
+              required
+            />
+            <span id="forgot-pw-email-error" class="error-msg"></span>
+          </div>
+          <div class="auth-form__footer">
+            <button id="auth-reset-btn" type="submit">Reset Password</button>
+            <p>
+              <button id="cancel-pw-reset-btn" type="button">
+                Back to Login
+              </button>
+            </p>
+          </div>
+        </form>
+      </div>
+    </div>
+    <!-- Footer -->
+    <footer>
+      <div class="logo">
+        <img src="ATAK_logo_v1.png" alt="company-logo">
+      </div>
+      <div class="copyright">
+        &copy; Copyright 2023 All rights reserved.
+      </div>
+    </footer>
+
+    <script src="app.js"></script>
+  </body>
+</html>
